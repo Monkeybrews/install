@@ -59,7 +59,7 @@ setup() {
 
   echo "[*] Creating packages.h..."
   cat > "$PKGHDR" <<'EOF'
-// WARNING! : DO NOT EDIT! THIS FILE WAS AUTO-CREATED BY MONKEYBREW //
+/* WARNING! : DO NOT EDIT! THIS FILE WAS AUTO-CREATED BY MONKEYBREW */
 
 #ifndef PACKAGES_H
 #define PACKAGES_H
