@@ -353,6 +353,15 @@ EOF
 }
 
 # ------------------------------
+# Update Packages
+# ------------------------------
+update_packages() {
+    echo "[*] Updating packages.h..."
+    setup  # This will recreate /opt/mbrew/packages.h
+    echo "[+] packages.h updated successfully!"
+}
+
+# ------------------------------
 # Compile locally
 # ------------------------------
 local_build() {
@@ -401,8 +410,11 @@ case "$ARGUMENT" in
   global)
     global_install
     ;;
+  update)
+    update_packages
+    ;;
   *)
-    echo "Usage: sudo ./install.sh [local|global]"
+    echo "Usage: sudo ./install.sh [local|global|update]"
     exit 1
     ;;
 esac
